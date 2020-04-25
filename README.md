@@ -18,6 +18,8 @@ normally shut down. You can now pull the power plug.
 Want a song in the disco? Sure, if it fits the set! Send a ~15 second snippet 
 as wav to tilman-disco@t-animal.de. No guarantees that it will be included.
 
+Fork me on https://github.com/t-animal/pocketdisco
+
 # Administration
 
 ## Commands
