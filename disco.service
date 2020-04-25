@@ -1,0 +1,8 @@
+[Unit]
+Description=Disco Disco Partizani!
+ 
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+ExecStart=/opt/disco/disco.sh
