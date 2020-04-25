@@ -11,3 +11,6 @@ Press the shiny red button. Wait until the song is almost over (abou 15 seconds)
 
 # Contributing
 Want a song in the disco? Sure, if it fits the set! Send a ~15 second snippet as mp3 to tilman-disco@t-animal.de. No guarantees that it will be included.
+
+# Debugging
+As the disco runs as a systemd service, check `journalctl -rb disco.service` in case of problems.
