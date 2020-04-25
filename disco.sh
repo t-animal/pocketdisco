@@ -1,5 +1,10 @@
 #!/bin/sh
 
+if [[ "$(groups | grep -E 'audio|root')" == "" ]]; then
+	echo "Must be root or in the 'audio' group";
+	exit 1;
+fi
+
 cd "$(dirname "$0")"
 
 gpio mode 7 input
