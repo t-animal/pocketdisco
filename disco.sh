@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if [[ "$(groups | grep -E 'audio|root')" == "" ]]; then
 	echo "Must be root or in the 'audio' group";
@@ -30,7 +30,7 @@ while true; do
 	echo "Detected button press"
 
 	gpio write 8 1
-	aplay dj-sets/current/$(ls -1 dj-sets/current/ | shuf -n 1)
+	aplay "$(find dj-sets/current/ -maxdepth 1 -type f -regex '.*wav' | shuf -n 1)"
 
 	echo "Played song"
 
