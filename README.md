@@ -12,10 +12,16 @@ Press the shiny red button. Wait until the song is almost over (abou 15 seconds)
 # Contributing
 Want a song in the disco? Sure, if it fits the set! Send a ~15 second snippet as wav to tilman-disco@t-animal.de. No guarantees that it will be included.
 
-# Debugging
+# Administration
+
+## Commands
+  * Volume: `alsamixer` to set volume then `sudo alsactl store 0`
+  * Get debugging log: `journalctl -rb disco.service`
+
+## Debugging
 As the disco runs as a systemd service, check `journalctl -rb disco.service` in case of problems.
 
-# Folder structure
+## Folder structure
 Put all files belonging to a feature set into a folder as .wav-files. Put that folder into the `/dj-sets` folder. To select a dj-set, symlink it to `dj-sets/current`.
 
 Here's a sample:
