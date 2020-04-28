@@ -31,8 +31,11 @@ while true; do
 
 	gpio write 8 1
 	sleep 0.1
-	aplay "$(find dj-sets/current/ -maxdepth 1 -type f -regex '.*wav' | shuf -n 1)"
 
+	song="$(find dj-sets/current/ -maxdepth 1 -type f -regex '.*wav' | shuf -n 1)"
+	echo "Randomly selected $song"
+
+	aplay $song
 	echo "Played song"
 
 	if [[ "$(gpio read 7)" == "0" ]]; then
