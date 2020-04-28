@@ -30,6 +30,7 @@ while true; do
 	echo "Detected button press"
 
 	gpio write 8 1
+	sleep 0.1
 	aplay "$(find dj-sets/current/ -maxdepth 1 -type f -regex '.*wav' | shuf -n 1)"
 
 	echo "Played song"
